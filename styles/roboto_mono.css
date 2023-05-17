@@ -1,0 +1,16 @@
+/**
+Fonts
+*/
+
+@font-face {
+	font-family: 'RobotoMono-ExtraLight';
+	src: url('../assets/fonts/RobotoMono-ExtraLight.ttf') format('truetype');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Orbitron-Regular';
+	src: url('../assets/fonts/Orbitron-Regular.ttf') format('truetype');
+	font-style: normal;
+}
+
