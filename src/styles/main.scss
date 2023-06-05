@@ -1,0 +1,16 @@
+
+// Reset
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/responsive';
+@import 'base/animations';
+
+//Components
+@import 'components/layout';
+@import 'components/parallax';
+
+//Fonts
+@font-face {
+    font-family: 'Scythe';
+    src:url("/fonts/Scythe.otf");
+}

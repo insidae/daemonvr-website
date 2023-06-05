@@ -1,0 +1,397 @@
+// MOBILE ONLY STYLES
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    body {
+        .nav-container,
+        .footer-container {
+            .menu-links {
+                display: none;
+
+                &.active {
+                    display: inline-block;
+                    margin-top: 4em;
+
+                    a {
+                        display: block;
+                        padding: 10px 22px;
+                    }
+                }
+            }
+
+            .nav-mobile {
+                position: absolute;
+                background: $grey-2;
+
+                #nav-toggle {
+                    position: absolute;
+                    left: 30px;
+                    top: 10px;
+                    cursor: pointer;
+                    padding: 10px 35px 16px 0px;
+
+                    span,
+                    span:before,
+                    span:after {
+                        cursor: pointer;
+                        border-radius: 1px;
+                        height: 5px;
+                        width: 35px;
+                        background: $white;
+                        position: absolute;
+                        display: block;
+                        content: '';
+                        transition: all 300ms ease-in-out;
+                    }
+
+                    span:before {
+                        top: -10px;
+                    }
+
+                    span:after {
+                        bottom: -10px;
+                    }
+
+                    &.active span {
+                        background-color: transparent;
+
+                        &:before,
+                        &:after {
+                            top: 0;
+                        }
+
+                        &:before {
+                            transform: rotate(45deg);
+                        }
+
+                        &:after {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+
+            .hero {
+                font-size: 12px;
+                width: 84%;
+
+                .logo {
+                    width: 50px;
+                }
+
+                .logotype {
+                    margin: 20px 15px;
+                    top: -20px;
+                }
+            }
+
+            .footer-links {
+                display: block;
+                margin: 0 40px;
+            }
+        }
+
+        .footer-container .hero {
+            margin-bottom: 30px;
+        }
+
+        #main-content {
+            .container {
+                padding: 0 15px;
+
+                .hero {
+                    .definition {
+                        width: 100%;
+                    }
+
+                    .digital-monster {
+                        display: none;
+                    }
+                }
+
+                .columns {
+                    display: block;
+
+                    .panel {
+                        width: 100%;
+                    }
+                }
+
+                .panel.tags {
+                    .tag-filter {
+                        margin: 25px 0;
+                        display: block;
+                    }
+                    
+
+                    .tag-heading {
+                        position: relative;
+                        top: -252px;
+                    }
+                }
+
+                &.post {
+                    .panel {
+                        .title {
+                            font-size: 1.5em;
+                            width: 100%;
+                        }
+
+                        .date {
+                            float: unset;
+                            text-align: left;
+                            margin: 0 0 30px;
+                            padding: 0 40px;
+                        }
+
+                        .post-content {
+                            p {
+                                max-width: unset;
+                            }
+
+                            blockquote {
+                                max-width: unset;
+                            }
+
+                            .gatsby-resp-image-wrapper {
+                                width: calc(100% + 80px);
+                                margin-top: 40px;
+                                margin-bottom: 40px;
+                                margin-left: -40px !important;
+                                margin-right: -40px !important;
+                            }
+
+                            .note {
+                                max-width: unset;
+
+                                &.illustration {
+                                    display: inline-block;
+                                    margin: 10px -40px;
+        
+                                    p {
+                                        width: 100%;
+                                    }
+
+                                    ul {
+                                        width: 100%;
+                                        padding-left: 1em;
+                                    }
+        
+                                    img.illustration {
+                                        width: 100%;
+                                        margin-left: 0px;
+                                        padding: 15%;
+                                    }
+                                }
+
+                                &.posters {
+                                    .gatsby-resp-image-wrapper {
+                                        width: 40%;
+                                    }
+                                }
+
+                                &.layers {
+                                    .gatsby-resp-image-wrapper {
+                                        width: 33vw !important;
+                                    }
+                                }
+                            }
+
+                            .book-info {
+                                margin: 10px -40px;
+                                padding: 15px 40px 20px;
+
+                                .left {
+                                    width: 100%;
+                                }
+        
+                                span.gatsby-resp-image-wrapper {
+                                    width: 100%;
+                                    top: 60px;
+                                    margin-bottom: 6em !important;
+                                }
+                            }
+                        }
+
+                        .next-post {
+                            float: none;
+                        }
+                    }
+                }
+
+                .post-listing {
+                    .posts {
+                        .post {
+                            margin-left: unset;
+                            width: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// TABLET ONLY STYLES
+
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+    body {
+        #main-content {
+            .container {
+                .columns {
+                    .left-list {
+                        padding-bottom: 0;
+                    }
+                    .right-list {
+                        padding-top: 0;
+                    }
+                
+                    &.three {
+                        display: block;
+
+                        .panel {
+                            width: 100%;
+
+                            &.reading {
+                                display: inline-block;
+                                padding: 15px 15px 15px 40px;
+
+                                .book-cover {
+                                    width: 30%;
+                                    float: right;
+                                }
+
+                                h2,
+                                .post-listing,
+                                .more {
+                                    width: 60%;
+                                    float: left;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.post {
+                    .panel {
+                        .post-content {
+                            p {
+                                max-width: unset;
+                            }
+
+                            blockquote {
+                                max-width: unset;
+                            }
+
+                            .note {
+                                max-width: unset;
+
+                                &.illustration {
+                                    display: inline-block;
+            
+                                    p {
+                                        width: 51%;
+                                    }
+            
+                                    img.illustration {
+                                        width: 35%;
+                                        margin-left: 10%;
+                                        padding: 20px 0;
+                                    }
+                                }
+
+                                &.layers {
+                                    .gatsby-resp-image-wrapper {
+                                        width: 14vw !important;
+                                    }
+                                }
+                            }
+
+                            .book-info {
+                                .left {
+                                    width: 45%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            .footer-container {
+                .hero {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+// MOBILE AND TABLET STYLES
+
+@media (max-width: $breakpoint-desktop) {
+    body {
+        #main-content {
+            .container {
+                .columns {
+                    ul {
+                        &.left-list,
+                        &.right-list {
+                            width: 100%;
+                        }
+                    }
+
+                    &.two {
+                        display: block;
+
+                        .panel {
+                            width: 100%;
+
+                            .bio {
+                                width: 100%;
+                            }
+                        }
+
+                        .photo {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .panel {
+                    &.tags {
+                        padding-bottom: 5px;
+
+                        h2 {
+                            display: block;
+                            margin: 0 0 30px;
+                        }
+                    }
+
+                    .post-content {
+                        .note {
+                            &.layers {
+                                max-width: unset !important;
+                                margin-top: 100px !important;
+
+                                &::before {
+                                    right: unset;
+                                    left: 50px;
+                                }
+                            }
+                        }
+
+                        .gatsby-highlight {
+                            margin: 100px -40px 40px;
+
+                            pre::before {
+                                right: unset;
+                                left: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
